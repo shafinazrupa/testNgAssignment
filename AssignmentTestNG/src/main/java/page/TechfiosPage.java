@@ -30,9 +30,7 @@ public class TechfiosPage extends BasePage  {
 	WebElement BackButton;
 	@FindBys(@FindBy(how = How.XPATH,using = "//select[@name = 'due_month']/descendant::option"))	
 	List<WebElement> MonthList;
-	private Object selectMonthDropDown;
-	private Object allMonthOptions;
-	//private String months;
+	 
 	// Methods to interact with the Elements
 	public void ClickOnAddCategoryButton(String category) {
 		CategoryInputBox.click();
@@ -56,7 +54,7 @@ public class TechfiosPage extends BasePage  {
     public boolean isMonthDropDownHasMonthsDisplayed() {
     	
 		Select selectMonthDropDown = new Select(MonthDropDown);
-	List<WebElement>allMonthOptions =   selectMonthDropDown.getoptions();
+	List<WebElement>allMonthOptions = selectMonthDropDown.getOptions();
 	
 	
 		
